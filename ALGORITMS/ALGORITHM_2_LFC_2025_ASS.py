@@ -65,7 +65,7 @@ def main():
 
         if processing_strings and line:  # Procesamos cada cadena después del encabezado
             is_valid = pda.process_string(line)
-            result = "Accepted ✅" if is_valid else "Rejected ❌"
+            result = "Accepted ✅ by the PDA" if is_valid else "Rejected ❌ by the PDA"
             print(f"String: {line} -> {result}")
 
 if __name__ == "__main__":
