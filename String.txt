@@ -1,0 +1,6 @@
+Valid strings:
+aaaaaaaaaabbbbbbbbbb
+ab
+aaaaaaabbbbbbb
+aaabbb
+aaaabbbb

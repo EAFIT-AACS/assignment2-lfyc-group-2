@@ -13,14 +13,20 @@ def main():
     
     valid_strings = set() #list in wich every string is unique
     
+    #
     while len(valid_strings) < num_strings:
-        valid_strings.add(generate_valid_string(random.randint(1,10)))
+        valid_strings.add(generate_valid_string(random.randint(1,10))) #if the function generates a string that is already in the set, that one will be ignored and the function will generate a new one
     
     print("\nValid Strings:\n")
     for j in valid_strings:
         print(j)
+        
+    # We save the valid strings in a txt file for it to be used in the next algorytmhs
+    with open("String.txt", "w") as out_file:
+        out_file.write("Valid strings:\n")
+        out_file.writelines(s + "\n" for s in valid_strings)
     
-"In this function we create the string that belongs to the grammar: S → aSb | ε."
+#In this function we create the string that belongs to the grammar: S → aSb | ε.
 def generate_valid_string(n):
     if n == 0:
         return ""
