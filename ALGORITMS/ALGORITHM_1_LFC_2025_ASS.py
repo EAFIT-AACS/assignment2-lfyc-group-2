@@ -1,9 +1,9 @@
-#we import the libraries that will be used, in this case just random
+2#we import the libraries that will be used, in this case just random
 import random
 
 #This is the definition of the main function of this algorytm in wich the functions that generates the strings will be called"
 def main():
-    print("Welcome to the generator of strings!! How many strings would you like to create?")
+    print("Welcome to the generator of strings!! How many strings would you like to create (per type - accepted and rejected)?")
     
     num_strings = int(input()) #The user inputs the number of strings that wants to generate
     
@@ -15,10 +15,10 @@ def main():
     invalid_strings = set() #list in wich every string is unique
     
     #We generate the strings taking into account the number given before
-    while len(valid_strings) < (num_strings//2)+1:
+    while len(valid_strings) < (num_strings):
         valid_strings.add(generate_valid_string(random.randint(1,10)))
     
-    while len(invalid_strings) < num_strings//2:
+    while len(invalid_strings) < num_strings:
         invalid_strings.add(generate_invalid_string(random.randint(1,10))) #if the function generates a string that is already in the set, that one will be ignored and the function will generate a new one
     
     # We print in console the valid string and the in valid strings generated
