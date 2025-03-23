@@ -38,13 +38,13 @@ cd <the_folder_in_wich_you_saved_the_repository>
 ```sh
 python ALGORITHM_1_LFC_2025_ASS.py
 ```
-   - This will generate valid and invalid strings and save them in `String.txt`.
+   - This will generate valid and invalid strings and save them in `String.txt` to implement the 2nd algorythm.
 
 3. Run the **second algorithm (Pushdown Automaton (PDA) implementation)**:
 ```sh
 python ALGORITHM_2_LFC_2025_ASS.py
 ```
-   - This will read `String.txt`, process each string, and print whether it's **Accepted ✅** or **Rejected ❌** by the PDA.
+   - This will read `String.txt`, process each string, and print whether it's **Accepted ✅** or **Rejected ❌** by the PDA. Then, the accepted strings will be saved in another txt for using the accepted string in the third algorythm.
 
 4. Run the **third algorithm (three of the PDA)**:
 ```sh
@@ -59,11 +59,12 @@ This algorithm generates strings based on the context-free grammar (CFG) rule:
 **S → aSb | ε**  
 
 #### How it works:  
-1. The user inputs the number of strings to generate for both valid and invalid cases.  
+1. The user inputs the number of strings to generate for both valid and invalid cases (all in one number).  
 2. The algorithm creates **valid** strings recursively following the CFG rule:  
+   - A numer (n) its created randomly in a range of (0-10) that means the length of the string
    - If `n = 0`, return an empty string (ε).  
    - Otherwise, generate a string by adding an `"a"`, then recursively calling itself, and finally appending a `"b"`.  
-   - Example: `n = 3` → `"aaabb"`.  
+   - Example: `n = 3` → `"aaabbb"`.  
 3. **Invalid** strings are created randomly with characters `"a"` and `"b"` but force an incorrect structure (e.g., by adding an extra `"a"` at the end).  
 4. Both valid and invalid strings are saved in a file named `String.txt`, which will be used in the next algorithm.  
 
@@ -77,7 +78,7 @@ bbba
 ```  
 
 ### 2️⃣ **Algorithm 2: Pushdown Automaton (PDA)**  
-This algorithm implements a **Pushdown Automaton (PDA)** that processes the generated strings and determines whether they belong to the grammar.  
+This algorithm implements a **Pushdown Automaton (PDA)** based in the given grammar that processes the generated strings and determines whether they belong to the grammar.  
 
 #### How it works:  
 1. The PDA starts with an **initial state (`q0`)** and an **empty stack** initialized with `Z0` (bottom-of-stack marker).  
