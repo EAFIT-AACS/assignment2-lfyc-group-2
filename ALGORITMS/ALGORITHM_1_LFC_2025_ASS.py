@@ -1,4 +1,4 @@
-2#we import the libraries that will be used, in this case just random
+#we import the libraries that will be used, in this case just random
 import random
 
 #This is the definition of the main function of this algorytm in wich the functions that generates the strings will be called"
@@ -49,7 +49,3 @@ def generate_invalid_string(n):
 
 if __name__ == "__main__":
     main()
-
-
-
-
