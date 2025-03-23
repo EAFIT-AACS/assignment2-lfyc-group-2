@@ -51,22 +51,32 @@ def main():
         sys.exit(1)
 
     pda = PushdownAutomaton()
-    processing_strings = False  # Controla cuándo empezar a leer cadenas
-
+    processing_strings = False
+    accepted_strings = []
     print("\n--- Processing Strings with PDA ---\n")
 
     for line in lines:
         line = line.strip()
-
-        # Detectamos la sección donde empiezan las cadenas
         if line.startswith("--- Strings: ---"):
             processing_strings = True
-            continue  # Saltamos la línea de encabezado
-
-        if processing_strings and line:  # Procesamos cada cadena después del encabezado
+            continue
+        if processing_strings and line:
             is_valid = pda.process_string(line)
             result = "Accepted ✅ by the PDA" if is_valid else "Rejected ❌ by the PDA"
             print(f"String: {line} -> {result}")
+            if is_valid:
+                accepted_strings.append(line)
+    
+    if accepted_strings:
+        try:
+            with open("AcceptedStrings.txt", "w") as output_file:
+                for string in accepted_strings:
+                    output_file.write(string + "\n")
+            print("\n✅ Accepted strings have been successfully saved in 'AcceptedStrings.txt'.\n")
+        except IOError:
+            print("\n❌ Error: Unable to write to 'AcceptedStrings.txt'.\n")
+    else:
+        print("\n⚠️ No accepted strings to save. 'AcceptedStrings.txt' was not created.\n")
 
 if __name__ == "__main__":
     main()
