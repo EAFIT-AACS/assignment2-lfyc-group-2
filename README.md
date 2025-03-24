@@ -34,6 +34,9 @@ python3 --version
 git clone <https://github.com/EAFIT-AACS/assignment2-lfyc-group-2.git>
 cd <the_folder_in_wich_you_saved_the_repository>
 ```
+
+- It is highly suggested to run the algorithms in order, this is because algorithm 2 depends on algorithm, and algorithm 3 depends on algorithm 2.
+
 2. Run the **first algorithm (string generator)**:
 ```sh
 python ALGORITHM_1_LFC_2025_ASS.py
@@ -46,11 +49,11 @@ python ALGORITHM_2_LFC_2025_ASS.py
 ```
    - This will read `String.txt`, process each string, and print whether it's **Accepted ✅** or **Rejected ❌** by the PDA. Then, the accepted strings will be saved in another txt for using the accepted string in the third algorythm.
 
-4. Run the **third algorithm (three of the PDA)**:
+4. Run the **third algorithm (processed configuration three of the PDA)**:
 ```sh
 python ALGORITHM_3_LFC_2025_ASS.py
 ```
-   - General explanation
+   - This will read `AcceptedString.txt` and will make a second verification of those strings. but also it is going to build the processed configuration tree for each string and it is going to show it in the console and in a .txt in order to make easy the procces of verification.
 ---
 ## ⚙️ Algorithm Explanation  
 
@@ -100,7 +103,51 @@ String: bbba -> Rejected ❌ by the PDA
 
 ---
 
-📌 **[Algorithm 3 Placeholder]**  
-(*Description of the third algorithm will be added once implemented.*)  
+### 3️⃣ **Algorithm 3: Processed Configuration Tree of the PDA**  
+This algorithm takes the **accepted strings** from the previous PDA implementation and constructs a **configuration tree** for each one. The configuration tree visually represents the sequence of steps the PDA follows to process a given string.  
 
+#### 🛠️ How it works:  
+1. The algorithm reads **AcceptedStrings.txt**, which contains strings accepted by the PDA.  
+2. Each string is processed again through the **Pushdown Automaton**, but this time, instead of only determining acceptance, it records every configuration change (state, remaining input, and stack contents).  
+3. The configuration tree starts at the initial state (`q0`), displaying the full string and stack.  
+4. As the PDA processes each character:  
+   - `"a"` is read → `"A"` is pushed onto the stack.  
+   - `"b"` is read → `"A"` is popped if available.  
+   - Each step is recorded in the configuration tree.  
+5. If the string is successfully processed and the stack is empty (except for `Z0`), the final configuration is stored with state `q_accept`.  
+6. The configuration trees are displayed on the **console** and saved in `config_trees.txt` for easier verification.  
+
+#### 📌 Example Output:  
+For the accepted string `"aaabb"`:  
+
+```plaintext
+--- Generating Configuration Trees for Accepted Strings ---
+
+String: aaabb
+
+q0, aaabb, Z0  
+q0, aabb, Z0A  
+q0, abb, Z0AA  
+q0, bb, Z0AAA  
+q0, b, Z0AA  
+q0, ε, Z0A  
+q_accept, ε, Z0  
+
+Processed configuration tree for: aaabb
+
+### 📝 Explanation of Each Row  
+
+Each row in the configuration tree represents a step in the PDA’s execution, consisting of:  
+
+- **State**: The current state of the automaton (`q0` or `q_accept`).  
+- **Remaining input**: The portion of the input string yet to be processed.  
+- **Current stack contents**: The stack's state at that step.  
+
+---
+
+### 🎯 Purpose of This Algorithm  
+
+✅ **Double-checks the correctness of accepted strings**  
+✅ **Provides a structured visualization of PDA execution**  
+✅ **Helps debug and verify context-free grammar adherence**  
 ---

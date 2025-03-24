@@ -1,0 +1,100 @@
+Configuration Trees:
+
+State, Remaining Input, Stack
+
+String: aaaaaaaabbbbbbbb
+q0, aaaaaaaabbbbbbbb, Z0
+q0, aaaaaaabbbbbbbb, Z0A
+q0, aaaaaabbbbbbbb, Z0AA
+q0, aaaaabbbbbbbb, Z0AAA
+q0, aaaabbbbbbbb, Z0AAAA
+q0, aaabbbbbbbb, Z0AAAAA
+q0, aabbbbbbbb, Z0AAAAAA
+q0, abbbbbbbb, Z0AAAAAAA
+q0, bbbbbbbb, Z0AAAAAAAA
+q0, bbbbbbb, Z0AAAAAAA
+q0, bbbbbb, Z0AAAAAA
+q0, bbbbb, Z0AAAAA
+q0, bbbb, Z0AAAA
+q0, bbb, Z0AAA
+q0, bb, Z0AA
+q0, b, Z0A
+q0, ε, Z0
+q_accept, ε, Z0
+
+
+String: aaaaaaaaabbbbbbbbb
+q0, aaaaaaaaabbbbbbbbb, Z0
+q0, aaaaaaaabbbbbbbbb, Z0A
+q0, aaaaaaabbbbbbbbb, Z0AA
+q0, aaaaaabbbbbbbbb, Z0AAA
+q0, aaaaabbbbbbbbb, Z0AAAA
+q0, aaaabbbbbbbbb, Z0AAAAA
+q0, aaabbbbbbbbb, Z0AAAAAA
+q0, aabbbbbbbbb, Z0AAAAAAA
+q0, abbbbbbbbb, Z0AAAAAAAA
+q0, bbbbbbbbb, Z0AAAAAAAAA
+q0, bbbbbbbb, Z0AAAAAAAA
+q0, bbbbbbb, Z0AAAAAAA
+q0, bbbbbb, Z0AAAAAA
+q0, bbbbb, Z0AAAAA
+q0, bbbb, Z0AAAA
+q0, bbb, Z0AAA
+q0, bb, Z0AA
+q0, b, Z0A
+q0, ε, Z0
+q_accept, ε, Z0
+
+
+String: aaaabbbb
+q0, aaaabbbb, Z0
+q0, aaabbbb, Z0A
+q0, aabbbb, Z0AA
+q0, abbbb, Z0AAA
+q0, bbbb, Z0AAAA
+q0, bbb, Z0AAA
+q0, bb, Z0AA
+q0, b, Z0A
+q0, ε, Z0
+q_accept, ε, Z0
+
+
+String: aaaaaaaaaabbbbbbbbbb
+q0, aaaaaaaaaabbbbbbbbbb, Z0
+q0, aaaaaaaaabbbbbbbbbb, Z0A
+q0, aaaaaaaabbbbbbbbbb, Z0AA
+q0, aaaaaaabbbbbbbbbb, Z0AAA
+q0, aaaaaabbbbbbbbbb, Z0AAAA
+q0, aaaaabbbbbbbbbb, Z0AAAAA
+q0, aaaabbbbbbbbbb, Z0AAAAAA
+q0, aaabbbbbbbbbb, Z0AAAAAAA
+q0, aabbbbbbbbbb, Z0AAAAAAAA
+q0, abbbbbbbbbb, Z0AAAAAAAAA
+q0, bbbbbbbbbb, Z0AAAAAAAAAA
+q0, bbbbbbbbb, Z0AAAAAAAAA
+q0, bbbbbbbb, Z0AAAAAAAA
+q0, bbbbbbb, Z0AAAAAAA
+q0, bbbbbb, Z0AAAAAA
+q0, bbbbb, Z0AAAAA
+q0, bbbb, Z0AAAA
+q0, bbb, Z0AAA
+q0, bb, Z0AA
+q0, b, Z0A
+q0, ε, Z0
+q_accept, ε, Z0
+
+
+String: aaaaabbbbb
+q0, aaaaabbbbb, Z0
+q0, aaaabbbbb, Z0A
+q0, aaabbbbb, Z0AA
+q0, aabbbbb, Z0AAA
+q0, abbbbb, Z0AAAA
+q0, bbbbb, Z0AAAAA
+q0, bbbb, Z0AAAA
+q0, bbb, Z0AAA
+q0, bb, Z0AA
+q0, b, Z0A
+q0, ε, Z0
+q_accept, ε, Z0
+

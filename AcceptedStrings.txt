@@ -1,0 +1,6 @@
+--- Accepted Strings: ---
+'aaaaaaaabbbbbbbb'
+'aaaaaaaaabbbbbbbbb'
+'aaaabbbb'
+'aaaaaaaaaabbbbbbbbbb'
+'aaaaabbbbb'

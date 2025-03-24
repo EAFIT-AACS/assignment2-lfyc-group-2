@@ -1,0 +1,11 @@
+--- Strings: ---
+'aaaaaaaabbbbbbbb'
+'aaaaaaaaabbbbbbbbb'
+'aaaabbbb'
+'aaaaaaaaaabbbbbbbbbb'
+'aaaaabbbbb'
+'aaaba'
+'abba'
+'bbaaaabba'
+'bbaa'
+'abbabaaa'
