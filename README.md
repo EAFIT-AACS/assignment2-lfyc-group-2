@@ -35,7 +35,7 @@ git clone <https://github.com/EAFIT-AACS/assignment2-lfyc-group-2.git>
 cd <the_folder_in_wich_you_saved_the_repository>
 ```
 
-- It is highly suggested to run the algorithms in order, this is because algorithm 2 depends on algorithm, and algorithm 3 depends on algorithm 2.
+- It is highly suggested to run the algorithms in order, this is because algorithm 2 depends on algorithm 1, and algorithm 3 depends on algorithm 2.
 
 2. Run the **first algorithm (string generator)**:
 ```sh
@@ -132,6 +132,7 @@ q0, bb, Z0AAA
 q0, b, Z0AA  
 q0, ε, Z0A  
 q_accept, ε, Z0  
+```
 
 Processed configuration tree for: aaabb
 
