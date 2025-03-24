@@ -148,7 +148,7 @@ Each row in the configuration tree represents a step in the PDA’s execution, c
 
 ### 🎯 Purpose of This Algorithm  
 
-✅ **Double-checks the correctness of accepted strings**  
-✅ **Provides a structured visualization of PDA execution**  
-✅ **Helps debug and verify context-free grammar adherence**  
+### ✅ **Double-checks the correctness of accepted strings**  
+### ✅ **Provides a structured visualization of PDA execution**  
+### ✅ **Helps debug and verify context-free grammar adherence**  
 ---
